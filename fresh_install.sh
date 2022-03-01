@@ -15,9 +15,9 @@ git config --global user.email toritoab01@gmail.com
 
 # Git Desktop
 #To get updated version visit https://github.com/shiftkey/desktop/releases/latest
-sudo wget https://github.com/shiftkey/desktop/releases/download/release-2.9.6-linux1/GitHubDesktop-linux-2.9.6-linux1.deb
-sudo gdebi GitHubDesktop-linux-2.9.6-linux1.deb
-sudo rm -rf GitHubDesktop-linux-2.9.6-linux1.deb
+sudo wget https://github.com/shiftkey/desktop/releases/download/release-2.9.9-linux2/GitHubDesktop-linux-2.9.9-linux2.deb
+sudo gdebi GitHubDesktop-linux-2.9.9-linux2.deb
+sudo rm -rf GitHubDesktop-linux-2.9.9-linux2.deb
 
 #VS Code
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
