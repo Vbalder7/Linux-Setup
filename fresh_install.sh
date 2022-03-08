@@ -4,7 +4,7 @@
 sudo apt-get update && sudo apt-get full-upgrade
 
 # Preffered cli, media viewer, version control sys, and other cool stuff 
-sudo apt-get -y install git gdebi-core neofetch htop gnome-terminal vlc nano whois 
+sudo apt-get -y install git git-core git-gui gdebi-core neofetch htop gnome-terminal vlc nano whois 
 
 # latest python3 version
 sudo apt-get -y install python3 python3-venv python3-pip
