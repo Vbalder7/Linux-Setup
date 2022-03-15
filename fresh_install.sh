@@ -10,10 +10,6 @@ sudo apt-get -y install git git-core git-gui gdebi-core neofetch htop gnome-term
 sudo apt-get -y install libsquashfuse0 squashfuse fuse
 sudo apt-get -y install snapd
 
-# Install Flatpak
-sudo apt-get -y install flatpak
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
 
 # latest python3 version
 sudo apt-get -y install python3 python3-venv python3-pip
