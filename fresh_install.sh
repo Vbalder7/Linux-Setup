@@ -17,6 +17,9 @@ sudo apt install default-jdk
 sudo apt-get update && sudo apt-get -y full-upgrade
 clear
 
+# Installing LibreOffice
+sudo apt-get -y install libreoffice
+
 # latest python3 version
 sudo apt-get -y install python3 python3-venv python3-pip
 clear
