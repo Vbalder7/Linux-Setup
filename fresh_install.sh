@@ -5,8 +5,14 @@ sudo apt-get update && sudo apt-get full-upgrade
 
 # Preffered cli, media viewer, version control sys, and other cool stuff 
 sudo apt-get -y install git git-core git-gui gdebi-core neofetch htop gnome-terminal vlc nano whois 
+
+# Install Snap
 sudo apt-get -y install libsquashfuse0 squashfuse fuse
 sudo apt-get -y install snapd
+
+# Install Flatpak
+sudo apt-get -y install flatpak
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 
 # latest python3 version
