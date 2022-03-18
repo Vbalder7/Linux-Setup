@@ -22,10 +22,10 @@ sudo apt-get -y install libreoffice
 
 # Install Firefox
 sudo apt install software-properties-common
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DC
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F
 sudo apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu focal main"
 sudo apt update && sudo apt -y upgrade
-sudo apt install firefox
+sudo apt -y install firefox
 
 # latest python3 version
 sudo apt-get -y install python3 python3-venv python3-pip
