@@ -21,6 +21,7 @@ clear
 sudo apt-get -y install libreoffice
 
 # Install Firefox
+sudo apt install software-properties-common
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DC
 sudo apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu focal main"
 sudo apt update && sudo apt -y upgrade
