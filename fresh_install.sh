@@ -4,7 +4,7 @@
 sudo apt-get update && sudo apt-get -y full-upgrade
 
 # Preffered cli, media viewer, version control sys, and other cool stuff 
-sudo apt-get -y install git git-core git-gui gdebi-core neofetch htop gnome-terminal vlc nano whois 
+sudo apt-get -y install git git-core git-gui gdebi-core neofetch htop gnome-terminal vlc nano whois apt-utils
 
 # Install Snap
 sudo apt-get -y install libsquashfuse0 squashfuse fuse
