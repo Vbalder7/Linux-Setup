@@ -45,9 +45,3 @@ export VISUAL="code"
 #export PS1="\[$(tput bold)\]\[$(tput setaf 4)\]\@ \[$(tput setaf 5)\][\[$(tput setaf 6)\]\u\[$(tput setaf 1)\]@\[$(tput setaf 2)\]\h\[$(tput setaf 5)\]] \[$(tput setaf 6)\]\W ${GIT_BRANCH}\[$(tput setaf 7)\]\n\\$ \[$(tput sgr0)\]"
 export PS1="\[$(tput bold)\]\[$(tput setaf 4)\]\@ \[$(tput setaf 5)\][\[$(tput setaf 6)\]\u\[$(tput setaf 1)\]@\[$(tput setaf 2)\]\h\[$(tput setaf 5)\]] \[$(tput setaf 6)\]\W\[$(tput setaf 7)\]\n\\$ \[$(tput sgr0)\]"
 
-
-#source ~/.local/share/icons-in-terminal/icons_bash.sh
-#. ~/.fancy-git/prompt.shexport PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-#source $(dirname $(gem which colorls))/tab_complete.sh
