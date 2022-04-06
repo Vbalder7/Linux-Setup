@@ -1,12 +1,20 @@
 #!/bin/bash
 
+
+# DISCLAIMER
+echo "This script will walk you through setting up your linux install, but it does require one restart. Thank you for your patience"
+
+sleep 3
+
+
+
 #    SHELL
 ################################################################################################################
 
 echo "Which shell would you prefer?
     1.) bash(default)
-    2.) tbd
-    3.) tbd
+    2.) zsh
+    3.) fish
 
 "
 
@@ -16,9 +24,35 @@ if [ "$shell" == "1" ]; then
 
     cat dotfiles/.bashrc > ~/.bashrc
     cat dotfiles/.bash_aliases > ~/.bash_aliases
+    chsh -s /bin/bash user
+    sudo chsh -s /bin/bash
+    source ~/.bashrc
+    source ~/.bash_aliases
+
+elif [ "$shell" == "2" ]; then
+
+    sudo apt  update -y
+    sudo apt  upgrade -y
+    sudo apt -y install zsh
+    chsh -s /bin/zsh
+    sudo chsh -s /bin/zsh
+    cat dotfiles/.zshrc > ~/.zshrc
+
+
+elif [ "$shell" == "3" ]; then
+
+    sudo apt  update -y
+    sudo apt  upgrade -y
+    sudo apt -y install fish
+    chsh -s /usr/bin/fish
+    sudo chsh -s /usr/bin/fish
+
 else
-    echo "this part isnt done"
+    echo "this didn't work"
+
 fi
+
+
 
 # LS
 ################################################################################################################
@@ -113,6 +147,11 @@ elif [ "$install" == "2" ]; then
     sudo apt -y install code
     clear
 
+    # Git Desktop
+    wget -qO - https://mirror.mwt.me/ghd/gpgkey | sudo tee /etc/apt/trusted.gpg.d/shiftkey-desktop.asc > /dev/null
+    sudo sh -c 'echo "deb [arch=amd64] https://mirror.mwt.me/ghd/deb/ any main" > /etc/apt/sources.list.d/packagecloud-shiftkey-desktop.list'
+    sudo apt update && sudo apt install github-desktop
+
     # View git config
     clear
     git config --list
@@ -121,3 +160,5 @@ else
     sudo apt full-upgrade -y
     sudo apt -y update && sudo apt upgrade -y
 fi
+
+sudo reboot
