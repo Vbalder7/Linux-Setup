@@ -89,6 +89,8 @@ if [ "$cls" == "y" ]; then
         rehash
 
         echo "source $(dirname $(gem which colorls))/tab_complete.sh" >> ~/.bashrc
+
+        echo 'PATH="$HOME/.rbenv/bin${PATH:+:${PATH}}"' >> ~/.bashrc
     elif [ "$shell" == "2" ]; then
 
         sudo apt install curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
