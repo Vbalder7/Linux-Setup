@@ -1,13 +1,52 @@
 #!/bin/bash
 
+#    SHELL
+################################################################################################################
+
+echo "Which shell would you prefer?
+    1.) bash(default)
+    2.) tbd
+    3.) tbd
+
+"
+
+read -p ": " shell
+
+if [ "$shell" == "1" ]; then
+
+    cat dotfiles/.bashrc > ~/.bashrc
+    cat dotfiles/.bash_aliases > ~/.bash_aliases
+else
+    echo "this part isnt done"
+fi
+
+# LS
+################################################################################################################
+
+echo "Would you like to use color ls (y/n)"
+
+read -p ": " cls
+
+if [ "$cls" == "y" ]; then
+
+    source $(dirname $(gem which colorls))/tab_complete.sh
+else
+    echo "this part isnt done"
+
+fi
+
+
+# INSTALL TYPE
+################################################################################################################
+
 echo "Which install would you like
     1.) Normal
     2.) Developer
     3.) Minimal
 "
-read -p ": " choice
+read -p ": " install
 
-if [ "$choice" == "1" ]; then
+if [ "$install" == "1" ]; then
     # standard update after new install
     sudo apt full-upgrade -y
     sudo apt -y update && sudo apt upgrade -y
@@ -27,7 +66,7 @@ if [ "$choice" == "1" ]; then
     sudo apt -y update && sudo apt -y full-upgrade
     sudo apt -y install firefox
 
-elif [ "$choice" == "2" ]; then
+elif [ "$install" == "2" ]; then
     # standard update after new install
     sudo apt full-upgrade -y
     sudo apt -y update && sudo apt upgrade -y
