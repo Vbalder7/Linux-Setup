@@ -1,7 +1,8 @@
 #!/bin/bash
 
-sudo apt-get -y update && sudo apt-get -y full-upgrade
-sudo apt-get -y auto-remove
+sudo apt full-upgrade -y
+sudo apt -y update && sudo apt upgrade -y
+sudo apt-get auto-remove -y
 
 clear
 neofetch
