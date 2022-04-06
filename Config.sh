@@ -72,7 +72,7 @@ elif [ "$install" == "2" ]; then
     sudo apt -y update && sudo apt upgrade -y
 
     # Preffered cli, media viewer, version control sys, and other cool stuff 
-    sudo apt -y install git git-core git-gui gdebi-core neofetch htop vlc nano whois apt-utils zsh
+    sudo apt -y install git git-core git-gui gdebi-core neofetch htop vlc nano whois apt-utils
     # Install Snap
     sudo apt -y install libsquashfuse0 squashfuse fuse
     sudo apt -y install snapd
