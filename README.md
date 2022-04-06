@@ -15,10 +15,10 @@ scripts that just do it for me so here it is.
 + Nano
 + Whois
 + Snap
-+ Java (jre)
-+ Java (jdk)
-+ LibreOffice
-+ Firefox
++ -optional- Java (jre)
++ -optional- Java (jdk)
++ -optional- LibreOffice
++ -optional- Firefox
 + Python3
 + Git Desktop
 + VS Code
