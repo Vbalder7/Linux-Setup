@@ -41,7 +41,7 @@ alias my_ip='curl -s ifconfig.co/json | python3 -m json.tool'
 export EDITOR="code"
 export VISUAL="code"
 
-#export GIT_BRANCH="$(echo "\033[33m(\$(git branch 2>/dev/null | grep '^*' | colrm 1 2))\033[0m")"
-#export PS1="\[$(tput bold)\]\[$(tput setaf 4)\]\@ \[$(tput setaf 5)\][\[$(tput setaf 6)\]\u\[$(tput setaf 1)\]@\[$(tput setaf 2)\]\h\[$(tput setaf 5)\]] \[$(tput setaf 6)\]\W ${GIT_BRANCH}\[$(tput setaf 7)\]\n\\$ \[$(tput sgr0)\]"
-export PS1="\[$(tput bold)\]\[$(tput setaf 4)\]\@ \[$(tput setaf 5)\][\[$(tput setaf 6)\]\u\[$(tput setaf 1)\]@\[$(tput setaf 2)\]\h\[$(tput setaf 5)\]] \[$(tput setaf 6)\]\W\[$(tput setaf 7)\]\n\\$ \[$(tput sgr0)\]"
+export GIT_BRANCH="$(echo "\033[33m(\$(git branch 2>/dev/null | grep '^*' | colrm 1 2))\033[0m")"
+export PS1="\[$(tput bold)\]\[$(tput setaf 4)\]\@ \[$(tput setaf 5)\][\[$(tput setaf 6)\]\u\[$(tput setaf 1)\]@\[$(tput setaf 2)\]\h\[$(tput setaf 5)\]] \[$(tput setaf 6)\]\W ${GIT_BRANCH}\[$(tput setaf 7)\]\n\\$ \[$(tput sgr0)\]"
+
 
