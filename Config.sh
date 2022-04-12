@@ -1,48 +1,9 @@
 #!/bin/bash
 
-
-# DISCLAIMER
-echo "This script will walk you through setting up your linux install, but it does require one restart. Thank you for your patience"
-
-sleep 3
-
-
-
-#    SHELL
-################################################################################################################
-
-echo "Which shell would you prefer?
-    1.) bash(default)
-    2.) zsh
-
-"
-
-read -p ": " shell
-
-if [ "$shell" == "1" ]; then
-
-    cat dotfiles/.bashrc > ~/.bashrc
-    cat dotfiles/.bash_aliases > ~/.bash_aliases
-    chsh -s /bin/bash 
-    sudo chsh -s /bin/bash
-    source ~/.bashrc
-    source ~/.bash_aliases
-
-elif [ "$shell" == "2" ]; then
-
-    sudo apt  update -y
-    sudo apt  upgrade -y
-    sudo apt -y install zsh
-    chsh -s /bin/zsh
-    sudo chsh -s /bin/zsh
-    cat dotfiles/.zshrc > ~/.zshrc
-
-else
-    echo "this didn't work"
-
-fi
-
-
+cat dotfiles/.bashrc > ~/.bashrc
+cat dotfiles/.bash_aliases > ~/.bash_aliases
+source ~/.bashrc
+source ~/.bash_aliases
 
 # LS
 ################################################################################################################
@@ -53,88 +14,25 @@ read -p ": " cls
 
 if [ "$cls" == "y" ]; then
 
-    if [ "$shell" == "1" ];then
-        sudo apt install curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
-        
-        curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
-
-        echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-
-        echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-
-        source ~/.bashrc
-
-        git clone https://github.com/rbenv/ruby-build.git
-
-        cat ruby-build/install.sh
-
-        PREFIX=/usr/local sudo ./ruby-build/install.sh
-
-        rbenv install -l
-
-        rbenv install 3.0.2
-
-        rbenv global 3.0.2
-
-        echo "gem: --no-document" > ~/.gemrc
-
-        gem install bundler
-
-        gem install rails -v 6.1.4.1
-
-        gem install colorls
-
-        rbenv rehash
-
-        rehash
-
-        echo "source $(dirname $(gem which colorls))/tab_complete.sh" >> ~/.bashrc
-
-        echo 'PATH="$HOME/.rbenv/bin${PATH:+:${PATH}}"' >> ~/.bashrc
-    elif [ "$shell" == "2" ]; then
-
-        sudo apt install curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
-        
-        curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | zsh
-
-        echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
-
-        echo 'eval "$(rbenv init -)"' >> ~/.zshrc
-
-        source ~/.zshrc
-
-        git clone https://github.com/rbenv/ruby-build.git
-
-        cat ruby-build/install.sh
-
-        PREFIX=/usr/local sudo ./ruby-build/install.sh
-
-        rbenv install -l
-
-        rbenv install 3.0.2
-
-        rbenv global 3.0.2
-
-        echo "gem: --no-document" > ~/.gemrc
-
-        gem install bundler
-
-        gem install rails -v 6.1.4.1
-
-        gem install colorls
-
-        rbenv rehash
-
-        rehash
-
-        echo "source $(dirname $(gem which colorls))/tab_complete.sh" >> ~/.zshrc
-    else
-        echo "sorry something went wrong"
-
-    fi 
-
-else
-    echo "this part isnt done"
+    sudo apt install curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
+    curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+    echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+    echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+    source ~/.bashrc
+    git clone https://github.com/rbenv/ruby-build.git
+    cat ruby-build/install.sh
+    PREFIX=/usr/local sudo ./ruby-build/install.sh
+    rbenv install -l
+    rbenv install 3.0.2
+    rbenv global 3.0.2
+    echo "gem: --no-document" > ~/.gemrc
+    gem install bundler
+    gem install rails -v 6.1.4.1
+    gem install colorls
+    rbenv rehash
+    rehash
+    echo "source $(dirname $(gem which colorls))/tab_complete.sh" >> ~/.bashrc
+    echo 'PATH="$HOME/.rbenv/bin${PATH:+:${PATH}}"' >> ~/.bashrc
 
 fi
 
@@ -229,5 +127,3 @@ else
     sudo apt full-upgrade -y
     sudo apt -y update && sudo apt upgrade -y
 fi
-
-sudo reboot
