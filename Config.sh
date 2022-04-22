@@ -74,6 +74,13 @@ elif [ "$install" == "2" ]; then
 
     # Preffered cli, media viewer, version control sys, and other cool stuff 
     sudo apt -y install git git-core git-gui gdebi-core neofetch htop vlc nano whois apt-utils
+
+    # setup and install rofi
+    sudo apt install rofi -y
+    
+    cat dotfiles/config.rasi > ~/config/rofi/config.rasi
+
+
     # Install Snap
     sudo apt -y install libsquashfuse0 squashfuse fuse
     sudo apt -y install snapd
