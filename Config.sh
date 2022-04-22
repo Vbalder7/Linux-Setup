@@ -78,7 +78,7 @@ elif [ "$install" == "2" ]; then
     # setup and install rofi
     sudo apt install rofi -y
     
-    cat dotfiles/config.rasi > ~/config/rofi/config.rasi
+    cat dotfiles/config.rasi > ~/.config/rofi/config.rasi
 
 
     # Install Snap
